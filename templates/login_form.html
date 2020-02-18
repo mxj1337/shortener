@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Logowanie</title>
+</head>
+<body>
+    <h1>Zaloguj się</h1>
+    <p style="color: red"> {{ message }}</p>
+<dl>
+    <form method="post">
+
+        <dt><label>Nazwa użytkownika</label></dt>
+        <dd><input type="text" name="username" /></dd>
+        <dt><label>Hasło</label></dt>
+        <dd><input type="password" name="password" /></dd>
+        <dt><input type="submit" value="Zaloguj się"></dt>
+    </form>
+</dl>
+<button type="button" onclick="location.href = '{{ home }}'">Ekran startowy</button>
+</body>
+</html>

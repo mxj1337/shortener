@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:http="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>START</title>
+</head>
+<body>
+    <h1> Witaj {{ username }}</h1> JD!
+    <dl>
+        <dt><button type="button" onclick="location.href='{{ shortener }}'">Skróć link </button></dt>
+
+        {% if logged == True %}
+            <dt><button type="button" onclick="location.href='{{ listoflinks }}'">Lista linków</button></dt>
+            <dt><button type="button" onclick="location.href='{{ logout }}'">Wyloguj się</button></dt>
+        {% else %}
+            <dt><button type="button" onclick="location.href = '{{ login }}'">Zaloguj się</button></dt>
+            <dt><button type="button" onclick="location.href = '{{ register }}'">Zarejestruj się</button></dt>
+        {% endif %}
+    </dl>
+</body>
+</html>

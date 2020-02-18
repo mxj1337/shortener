@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Skracacz linków</title>
+</head>
+<body>
+<dl>
+    <form method="post">
+        {% if url == '' %}
+            <dt><label>Link do skrócenia</label></dt>
+            <dd><input type="text" name="url" /></dd>
+            <dt><input type="submit" value="Skróć mnie!"></dt>
+        {% else %}
+            <dt><label>Link do skrócenia</label></dt>
+            <dd><input type="text" value="{{ url }}" /></dd>
+            <dt><label>Skrócony link</label></dt>
+            <dd><input type="text" value="{{ short_url }}" /></dd>
+        {% endif %}
+    </form>
+</dl>
+<button type="button" onclick="location.href = '{{ home }}'">Ekran startowy</button>
+</body>
+</html>

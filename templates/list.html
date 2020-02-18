@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista skróconych linków</title>
+</head>
+<body>
+<h1>Lista skróconych linków</h1>
+<table border="1">
+    <tr>
+        <td>Skrócony link</td>
+        <td>Oryginalny link</td>
+    </tr>
+    {% for key in urls_db %}
+        <tr>
+        <td>{{ key }}</td>
+        <td>{{ urls_db[key] }}</td>
+        </tr>
+    {% endfor %}
+</table>
+<button type="button" onclick="location.href = '{{ database }}'">Opcje bazy danych</button>
+
+<button type="button" onclick="location.href = '{{ home }}'">Ekran startowy</button>
+
+</body>
+</html>
